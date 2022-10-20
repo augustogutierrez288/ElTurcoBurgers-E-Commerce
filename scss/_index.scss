@@ -1,5 +1,5 @@
 .caja-header{
-    height: 30vh;
+    height: auto;
     width: 100%;
     text-align: center;
     color: #fff;
@@ -18,6 +18,7 @@
         display: inline-block;
         width: 220px;
         margin-top: 20px;
+        margin-bottom: 40px;
         background: #ffbf47;
         background: -webkit-linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
         background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
@@ -37,25 +38,83 @@
     }
 }
 
-.caja2-header{
-    width: 100%;
+.containerr {
+    position: relative;
+    background: #212529;
     height: auto;
-    background: #ffbf47;
-    background: -webkit-linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
-    background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
-    text-align: center;
-    img{
-        width: 200px;
-        margin-bottom: 15px;
-    }
-    p{
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 400;
-        width: 400px;
-        height: auto;
-    }
+}
+  
+.wave {
+    position: absolute;
+    height: 131px;
+    width: 100%;
+    background:#212529;
+    bottom: 2%;
+}
+  
+.wave::before, .wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+  
+.wave::before {
+    width: 52.5%;
+    height: 109%;
+    background-color: #fff;
+    right: 0;
+    top: 60%;
 }
 
+.wave::after {
+    width: 54.4%;
+    height: 100%;
+    background-color: #212529;
+    left: 0;
+    top: 40%;
+}
 
-
+.conteiner-padre--txt{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    .container-hijo--txt{
+        width: 90%;
+        height: auto;
+        text-align: center;
+        color: #fff;
+        margin: 30px 0 50px 0;
+        z-index: 1000;
+        
+        p{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        a{
+            display: inline-block;
+            width: 300px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            background: #ffbf47;
+            background: -webkit-linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+            background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+            border-radius: 10px;
+            padding: 15px;
+            img{
+                width: 30px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

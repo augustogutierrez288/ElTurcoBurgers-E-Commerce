@@ -1,5 +1,21 @@
 body {
   font-family: "Playfair Display", serif !important;
+  background: #ffbf47 !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #131313;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  border-radius: 15px;
 }
 
 .logo {
@@ -32,7 +48,7 @@ body {
   font-weight: 800;
   margin-bottom: 15px;
 }
-.caja-header p {
+.caja-header h2 {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
@@ -85,7 +101,7 @@ body {
 .wave::before {
   width: 52.5%;
   height: 109%;
-  background-color: #fff;
+  background: #ffbf47;
   right: 0;
   top: 60%;
 }
@@ -123,7 +139,7 @@ body {
   margin: 30px 0 50px 0;
   z-index: 1000;
 }
-.conteiner-padre--txt .container-hijo--txt p {
+.conteiner-padre--txt .container-hijo--txt h3 {
   font-size: 1rem;
   font-weight: 400;
 }
@@ -148,4 +164,126 @@ body {
 .conteiner-padre--txt .container-hijo--txt a img {
   width: 30px;
   margin-right: 5px;
+}
+
+.div-padre {
+  width: 80%;
+  height: 770px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 70px;
+}
+
+.div1 {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.div1 h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 10px 0 20px 0;
+}
+.div1 img {
+  width: 80%;
+  height: 75%;
+  border-radius: 100%;
+}
+
+.div2 {
+  width: 100%;
+  height: 50%;
+  color: #fff;
+}
+.div2 p {
+  margin: 20px 0 20px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.div2 ul {
+  padding-left: 20px;
+  list-style-type: none !important;
+}
+.div2 ul li {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.div3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+.div3 #comprar {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+.div3 #agregar-al-carrito {
+  display: inline-block;
+  width: 60px;
+  margin-left: 10px;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+.div3 #agregar-al-carrito img {
+  width: 30px;
 }

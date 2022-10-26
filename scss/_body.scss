@@ -1,3 +1,20 @@
 body{
     font-family: 'Playfair Display', serif !important;
+    background: #ffbf47 !important;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track{
+    background-color: #131313;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #ffbf47;
+    background: -webkit-linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+    background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+    border-radius: 15px;
 }

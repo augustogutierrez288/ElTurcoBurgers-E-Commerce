@@ -8,7 +8,7 @@
         font-weight: 800;
         margin-bottom: 15px;
     }
-    p{
+    h2{
         font-size: 1rem;
         font-weight: 400;
         font-style: italic;
@@ -62,7 +62,7 @@
 .wave::before {
     width: 52.5%;
     height: 109%;
-    background-color: #fff;
+    background: #ffbf47;
     right: 0;
     top: 60%;
 }
@@ -90,7 +90,7 @@
         margin: 30px 0 50px 0;
         z-index: 1000;
         
-        p{
+        h3{
             font-size: 1rem;
             font-weight: 400;
         }

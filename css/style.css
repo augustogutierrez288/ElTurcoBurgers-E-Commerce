@@ -168,7 +168,7 @@ body {
 
 .div-padre {
   width: 80%;
-  height: 770px;
+  height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,7 +187,7 @@ body {
 
 .div1 {
   width: 100%;
-  height: 50%;
+  height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,14 +210,14 @@ body {
   margin: 10px 0 20px 0;
 }
 .div1 img {
-  width: 80%;
-  height: 75%;
+  width: 250px;
+  height: 250px;
   border-radius: 100%;
 }
 
 .div2 {
   width: 100%;
-  height: 50%;
+  height: auto;
   color: #fff;
 }
 .div2 p {
@@ -237,6 +237,13 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
+.div2 .precio {
+  text-align: center;
+  margin: 8px 0 8px 0px;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
 
 .div3 {
   display: -webkit-box;
@@ -248,7 +255,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .div3 #comprar {
   display: inline-block;
@@ -270,6 +277,7 @@ body {
 .div3 #agregar-al-carrito {
   display: inline-block;
   width: 60px;
+  height: 54px;
   margin-left: 10px;
   background: #ffbf47;
   background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
@@ -286,4 +294,135 @@ body {
 }
 .div3 #agregar-al-carrito img {
   width: 30px;
+}
+
+.accordion {
+  margin: 20px 0 20px 0 !important;
+  color: #fff;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+  color: #fff !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.accordion-button::after {
+  background-image: url(../assets/Logos/flecha.png);
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: #212529 !important;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff !important;
+  font-size: 1rem !important;
+  font-weight: 300 !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../assets/Logos/flecha.png) !important;
+  -webkit-transform: rotate(180deg) !important;
+          transform: rotate(180deg) !important;
+}
+
+.accordion-body ul {
+  padding-left: 20px;
+  list-style-type: none !important;
+}
+.accordion-body ul li {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.contenedor1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.contenedor1 div {
+  text-align: left;
+}
+.contenedor1 div p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  margin: 20px 0 0 20px;
+}
+
+.contenedor3 div p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  margin: 0 0 10px 20px;
+}
+.contenedor3 .tarjetas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contenedor3 .tarjetas img {
+  width: 50px;
+  margin: 15px 0 0 15px;
+}
+
+.contenedor4 .rs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0 20px 0;
+}
+.contenedor4 .rs a img {
+  margin-left: 15px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.derechos {
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+.derechos p {
+  color: #fff;
+  font-size: 8.5px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  margin: 5px 0 5px 0;
 }

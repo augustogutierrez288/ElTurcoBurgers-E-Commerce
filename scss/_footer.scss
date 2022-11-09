@@ -18,7 +18,7 @@
     z-index: 3;
     border-color:#212529 !important;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+    box-shadow: none !important;
 }
 .accordion-button:not(.collapsed) {
     color: #fff !important;
@@ -51,23 +51,37 @@
     justify-content: center;
     align-items: flex-start;
     div{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
         text-align: left;
-        p{
+        h4{
+            margin: 20px 0 10px 20px;
+            font-size: 20px;
+        }
+        a{
             color: #fff;
-            font-size: 1rem;
-            font-weight: 500;
-            font-family: 'Roboto', sans-serif;
-            margin: 20px 0 0 20px;
-
+            display: block;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        p{
+            margin: 0;
+            img{
+                width: 15px;
+                margin: 0 5px 0 20px;
+            }
         }
     }
 }
 
 .contenedor3{
     div{
-        p{
+        h4{
             color: #fff;
-            font-size: 1rem;
+            font-size: 20px;
             font-weight: 500;
             font-family: 'Roboto', sans-serif;
             margin: 0 0 10px 20px;  
@@ -81,6 +95,12 @@
         img{
             width: 50px;
             margin: 15px 0 0 15px;
+            border-radius: 10px;
+        }
+        .img--qr{
+            width: 40px;
+            margin: 15px 0 0 15px;
+            border-radius: 10px;
         }
     }
 }
@@ -88,14 +108,27 @@
 .contenedor4{
     .rs{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-around;
         align-items: center;
         margin:15px 0 20px 0;
-        a{
+        p{
             img{
-                margin-left: 15px;
                 width: 35px;
-                cursor: pointer;
+                margin: 0 15px 0 20px;
+            }
+            color: #fff;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: 'Roboto', sans-serif;
+            margin-right: 30px;
+        }
+        div{
+            a{
+                img{
+                    margin-left: 15px;
+                    width: 35px;
+                    cursor: pointer;
+                }
             }
         }
     }

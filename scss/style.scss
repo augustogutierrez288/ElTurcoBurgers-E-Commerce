@@ -3,17 +3,48 @@
 @import "header";
 @import "main";
 @import "footer";
+@import "404";
 
-@media screen and (min-width: 1400px) {
-   
-}
-
-@media screen and (min-width: 1200px) {
-   
-}
 
 @media screen and (min-width: 992px) {
-   
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end !important;
+    }
+
+    .div-padre {
+        margin-left: 20px !important;
+    }
+
+    .contenedor3{
+        h4{
+        text-align: center !important;
+        }
+        .tarjetas{
+            justify-content: center !important;
+        }
+    }
+
+    .contenedor4{
+        .rs{
+            div{
+                a{
+                    img{
+                        margin-left: 5px;
+                        margin-right: 10px;
+                        width: 35px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .contenedor-hijo{
+       flex-direction: row;
+        div{
+          text-align: left;
+        }   
+    } 
 }
 
 @media screen and (min-width: 768px) {
@@ -92,32 +123,31 @@
 @media screen and (min-width: 576px) {
     .caja-header{
         h1{
-            font-size: 40px;
+            font-size: 40px !important;
         }
         h2{
-            font-size: 22px;
+            font-size: 20px !important;
         }
         a{
-            width: 280px;
-            font-size: 20px;
+            width: 280px !important;
+            font-size: 20px !important;
             img{
-                width: 33px;
+                width: 33px !important;
             }
         }
     }
 
-    .conteiner-padre--txt{
-        
+    .container-padre--txt{   
         .container-hijo--txt{
             h3{
-                font-size: 22px;
+                font-size: 20px !important;
             }
             a{
-                width: 350px;
-                font-size: 20px;
+                width: 350px !important;
+                font-size: 20px !important;
                 img{
-                    width: 30px;
-                    margin-right: 7px;
+                    width: 30px !important;
+                    margin-right: 7px !important;
                 }
             }
         }
@@ -155,4 +185,24 @@
             font-size: 18px;
         }
     }
+
+    .contenedor{
+        img{
+            width: 420px !important;
+        }
+    }
+    .contenedor-hijo{
+        top: 60px !important;
+        div{
+            h1{
+                font-size: 35px !important;
+            }
+            h2{
+                font-size: 18px !important;
+            }
+            p{
+                font-size: 18px !important;
+            }
+        }   
+    }   
 }

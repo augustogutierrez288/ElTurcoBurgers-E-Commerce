@@ -1,0 +1,84 @@
+.body-error{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .negro{
+        width: 100%;
+        height: 65%;
+        background-color: rgb(33,37,41);
+    }
+    .amarillo{
+        width: 100%;
+        height: 35%;
+        background: #ffbf47;
+        background: -webkit-linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+        background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+    }
+    .contenedor-hijo{
+        position: absolute;
+        top: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div{
+            text-align: center;
+            h1{
+                color: white;
+                font-size: 2rem;
+                font-family: 'Playfair Display', serif !important;
+                font-weight: 800;
+                margin-bottom: 15px;
+            }
+            h2{
+                color: white;
+                font-size: 1rem;
+                font-family: 'Playfair Display', serif !important;
+                font-weight: 400;
+                font-style: italic;
+                margin-bottom: 20px;
+            }
+            p{
+                color: white;
+                font-size: 1rem;
+                font-family: 'Playfair Display', serif !important;
+                font-weight: 400; 
+                font-style: italic;
+            }
+            a{
+                display: inline-block;
+                width: 100px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                background: #ffbf47;
+                background: -webkit-linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+                background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+                cursor: pointer;
+                text-decoration: none;
+                color: #000;
+                font-size: 17px;
+                font-weight: 400;
+                font-style: italic;
+                text-align: center;
+                border-radius: 10px;
+                padding: 15px;
+            }
+        }
+        img{
+            width: 390px;
+        }
+    }
+    
+}

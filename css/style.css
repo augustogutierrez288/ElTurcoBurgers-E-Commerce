@@ -8,7 +8,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #131313;
+  background-color: rgb(33, 37, 41);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -114,7 +114,7 @@ body {
   top: 40%;
 }
 
-.conteiner-padre--txt {
+.container-padre--txt {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -131,7 +131,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.conteiner-padre--txt .container-hijo--txt {
+.container-padre--txt .container-hijo--txt {
   width: 90%;
   height: auto;
   text-align: center;
@@ -139,12 +139,12 @@ body {
   margin: 30px 0 50px 0;
   z-index: 1000;
 }
-.conteiner-padre--txt .container-hijo--txt h3 {
+.container-padre--txt .container-hijo--txt h3 {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
 }
-.conteiner-padre--txt .container-hijo--txt a {
+.container-padre--txt .container-hijo--txt a {
   display: inline-block;
   width: 300px;
   margin-top: 20px;
@@ -162,7 +162,7 @@ body {
   border-radius: 10px;
   padding: 15px;
 }
-.conteiner-padre--txt .container-hijo--txt a img {
+.container-padre--txt .container-hijo--txt a img {
   width: 30px;
   margin-right: 5px;
 }
@@ -467,6 +467,140 @@ body {
   margin: 5px 0 5px 0;
 }
 
+.body-error {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.contenedor {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contenedor .negro {
+  width: 100%;
+  height: 65%;
+  background-color: rgb(33, 37, 41);
+}
+.contenedor .amarillo {
+  width: 100%;
+  height: 35%;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+}
+.contenedor .contenedor-hijo {
+  position: absolute;
+  top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contenedor .contenedor-hijo div {
+  text-align: center;
+}
+.contenedor .contenedor-hijo div h1 {
+  color: white;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif !important;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.contenedor .contenedor-hijo div h2 {
+  color: white;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif !important;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.contenedor .contenedor-hijo div p {
+  color: white;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif !important;
+  font-weight: 400;
+  font-style: italic;
+}
+.contenedor .contenedor-hijo div a {
+  display: inline-block;
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+.contenedor .contenedor-hijo img {
+  width: 390px;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+  }
+  .div-padre {
+    margin-left: 20px !important;
+  }
+  .contenedor3 h4 {
+    text-align: center !important;
+  }
+  .contenedor3 .tarjetas {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .contenedor4 .rs div a img {
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 35px;
+    cursor: pointer;
+  }
+  .contenedor-hijo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contenedor-hijo div {
+    text-align: left;
+  }
+}
 @media screen and (min-width: 768px) {
   .div-padre {
     width: 400px !important;
@@ -516,28 +650,28 @@ body {
 }
 @media screen and (min-width: 576px) {
   .caja-header h1 {
-    font-size: 40px;
+    font-size: 40px !important;
   }
   .caja-header h2 {
-    font-size: 22px;
+    font-size: 20px !important;
   }
   .caja-header a {
-    width: 280px;
-    font-size: 20px;
+    width: 280px !important;
+    font-size: 20px !important;
   }
   .caja-header a img {
-    width: 33px;
+    width: 33px !important;
   }
-  .conteiner-padre--txt .container-hijo--txt h3 {
-    font-size: 22px;
+  .container-padre--txt .container-hijo--txt h3 {
+    font-size: 20px !important;
   }
-  .conteiner-padre--txt .container-hijo--txt a {
-    width: 350px;
-    font-size: 20px;
+  .container-padre--txt .container-hijo--txt a {
+    width: 350px !important;
+    font-size: 20px !important;
   }
-  .conteiner-padre--txt .container-hijo--txt a img {
-    width: 30px;
-    margin-right: 7px;
+  .container-padre--txt .container-hijo--txt a img {
+    width: 30px !important;
+    margin-right: 7px !important;
   }
   .div-padre {
     width: 70%;
@@ -559,5 +693,20 @@ body {
   }
   .div3 #comprar {
     font-size: 18px;
+  }
+  .contenedor img {
+    width: 420px !important;
+  }
+  .contenedor-hijo {
+    top: 60px !important;
+  }
+  .contenedor-hijo div h1 {
+    font-size: 35px !important;
+  }
+  .contenedor-hijo div h2 {
+    font-size: 18px !important;
+  }
+  .contenedor-hijo div p {
+    font-size: 18px !important;
   }
 }

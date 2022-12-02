@@ -6,6 +6,50 @@
 .carrito{
     width: 25px;
     margin: 10px 0 0 10px;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+    cursor: pointer;
+}
+
+
+.numero-de-carrito{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 36px;
+    right: 80px;
+}
+
+.contenedor-carrito{
+    display: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 60vw;
+    height: 70vh;
+    background-color: #212529;
+    z-index: 1000000;
+}
+
+.contenedor-carrito.active{
+    display: block !important;
+    animation-name: animacion-contenedor-carrito;
+    animation-duration: 1.5s;
+}
+
+@keyframes animacion-contenedor-carrito {
+    0%{ opacity: 0; }
+    25%{ opacity: 2.5; }
+    50%{ opacity: 5.5;}
+    75%{ opacity: 7.5;}
+    100%{ opacity: 10;}
 }
 
 
@@ -18,4 +62,4 @@
 .navbar-nav {
     margin-right: 5px !important;
     text-align: right !important;
-  }
+}

@@ -7,6 +7,19 @@
 
 
 @media screen and (min-width: 992px) {
+    .espaciado{
+        margin-right: 45px !important;
+    }
+    .carrito{
+        top: 25px;
+        right: 30px;
+    }
+    
+    .numero-de-carrito{
+        top: 36px;
+        right: 15px;
+    }
+
     .navbar-expand-lg .navbar-collapse {
         justify-content: flex-end !important;
     }
@@ -121,6 +134,7 @@
 }
 
 @media screen and (min-width: 576px) {
+
     .caja-header{
         h1{
             font-size: 40px !important;

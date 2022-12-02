@@ -26,8 +26,89 @@ body {
 .carrito {
   width: 25px;
   margin: 10px 0 0 10px;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  cursor: pointer;
 }
 
+.numero-de-carrito {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  top: 36px;
+  right: 80px;
+}
+
+.contenedor-carrito {
+  display: none !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 60vw;
+  height: 70vh;
+  background-color: #212529;
+  z-index: 1000000;
+}
+
+.contenedor-carrito.active {
+  display: block !important;
+  -webkit-animation-name: animacion-contenedor-carrito;
+          animation-name: animacion-contenedor-carrito;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes animacion-contenedor-carrito {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 2.5;
+  }
+  50% {
+    opacity: 5.5;
+  }
+  75% {
+    opacity: 7.5;
+  }
+  100% {
+    opacity: 10;
+  }
+}
+
+@keyframes animacion-contenedor-carrito {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 2.5;
+  }
+  50% {
+    opacity: 5.5;
+  }
+  75% {
+    opacity: 7.5;
+  }
+  100% {
+    opacity: 10;
+  }
+}
 .navbar-dark .navbar-toggler-icon {
   background-image: url(../assets/Logos/MenuBurgers.webp) !important;
 }
@@ -569,6 +650,17 @@ body {
 }
 
 @media screen and (min-width: 992px) {
+  .espaciado {
+    margin-right: 45px !important;
+  }
+  .carrito {
+    top: 25px;
+    right: 30px;
+  }
+  .numero-de-carrito {
+    top: 36px;
+    right: 15px;
+  }
   .navbar-expand-lg .navbar-collapse {
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;

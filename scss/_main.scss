@@ -1,11 +1,12 @@
 .div-padre{
     width: 80%;
-    height: 800px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 70px;
+    padding: 10px 0 10px 0;
 }
 .div1{
     width: 100%;
@@ -22,8 +23,8 @@
         margin: 10px 0 20px 0;
     }
     img{
-        width: 250px;
-        height: 250px;
+        width: 270px;
+        height: 270px;
         border-radius: 100%;
     }
 }
@@ -32,6 +33,7 @@
     width: 100%;
     height: auto;
     color: #fff;
+    margin-top: 20px;
     p{  
         margin: 20px 0 20px 20px;
         font-size: 1rem;
@@ -63,9 +65,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    #comprar{
+    .ingredientes{
         display: inline-block;
-        width: 100px;
+        width: 110px;
         margin-right: 10px;
         background: #ffbf47;
         background: -webkit-linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
@@ -79,9 +81,10 @@
         text-align: center;
         border-radius: 10px;
         padding: 15px;
+        border-color: transparent;
     }
 
-    #agregar-al-carrito{
+    .agregar-al-carrito{
         display: inline-block;
         width: 60px;
         height: 54px;
@@ -98,8 +101,10 @@
         text-align: center;
         border-radius: 10px;
         padding: 15px;
+        border-color: transparent;
         img{
             width: 30px;
         }
+        
     }
 }

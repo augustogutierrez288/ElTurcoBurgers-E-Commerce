@@ -20,6 +20,7 @@
             <div class="container-fluid">
               <a class="navbar-brand" href="./index.html"><img class="logo" src="./assets/Logos/ElTurcoBurgers-logo.webp" alt="logo-el-turco-burgers"></a>
 
+              <!-- Logo carrito de compras -->
               <img class="carrito" src="./assets/Logos/CarritoDeCompras.webp" alt="carrito-de-compras"><span class="numero-de-carrito">0</span>
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,8 +41,21 @@
                 </ul>
               </div>
             </div>
-
-            <div class="contenedor-carrito"></div>
+          <!-- Carrito de compras -->
+            <div class="contenedor-carrito">
+              <div id="contenedor-primario">
+                
+              </div>
+              <div class="footer-carrito">
+                <p>Total:</p>
+                <button class="btn btn-danger txt" id="vaciar-carrito">Vaciar Carrito</button>
+                <p class="total-de-productos">0</p>
+                <p class="total-de-precios">$0</p>
+              </div>
+              <div class="d-flex flex-row justify-content-end align-items-center p-1">
+                <button class="btn btn-success txt">Comprar</button>
+              </div>
+            </div>
         </nav>
 
         <section class="container-fluid p-0">
@@ -74,262 +88,9 @@
     <main class="container-fluid p-0" id="burgers">
       <section class="row" style="margin: 50px 0 0 0">
         <div class="d-flex flex-column justify-content-center align-items-center d-sm-flex flex-sm-column justify-content-sm-center 
-        align-items-sm-center d-md-flex flex-md-column justify-content-md-center align-items-md-center d-lg-flex flex-lg-wrap flex-lg-row justify-content-lg-center
-        align-items-lg-center d-xl-flex flex-xl-wrap flex-xl-row justify-content-xl-center align-items-xl-center d-xxl-flex flex-xxl-wrap flex-xxl-row justify-content-xxl-center align-items-xxl-center">
-
-          <!-- Burger turquecita -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre">
-            <div class="div1">
-              <h4>Burger Turquecita</h4>
-              <img src="./assets/burgers/Turquecita.webp" alt="burger-turquecita">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal con semilla de sesamo</li>
-                <li>Panceta</li>
-                <li>1 medallon de carne</li>
-                <li>Lechuga y tomate</li>
-                <li>Queso cheddar</li>
-                <li>Cebolla glaciada</li>
-                <li>Salsa Barbacoa</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$849,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-           <!-- Simple Burger -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre">
-            <div class="div1">
-              <h4>Simple Burger</h4>
-              <img src="./assets/burgers/Simple-Burger.webp" alt="simple-burger">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal moreno</li>
-                <li>Huevo a la plancha</li>
-                <li>1 medallon de carne</li>
-                <li>Lechuga y tomate</li>
-                <li>Tomate</li>
-                <li>Lechuga</li>
-                <li>Salsa Barbacoa</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$579,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Burger de Pollo -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre">
-            <div class="div1">
-              <h4>Burger de Pollo</h4>
-              <img src="./assets/burgers/Burger-de-pollo.webp" alt="burger-de-pollo">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal moreno</li>
-                <li>1 medallon dorado de pollo</li>
-                <li>Trozos picados de bife de pollo</li>
-                <li>Salsa blanca</li>
-                <li>Panceta</li>
-                <li>Papas doradas</li>
-                <li>Salsa Barbacoa</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$759,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Torre Burger -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre" id="torreBurger">
-            <div class="div1">
-              <h4>Torre Burger</h4>
-              <img src="./assets/burgers/Torre-Burger.webp" alt="torre-burger">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal moreno</li>
-                <li>3 medallones de carne</li>
-                <li>Triple queso cheddar</li>
-                <li>Panceta</li>
-                <li>Mostaza</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$979,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- Burger Tentacion -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre" id="torreBurger">
-            <div class="div1">
-              <h4>Burger Tentacion</h4>
-              <img src="./assets/burgers/Tentacion.webp" alt="burger-tentacion">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal moreno</li>
-                <li>Medallon de carne</li>
-                <li>Bondiola</li>
-                <li>Queso cheddar</li>
-                <li>Panceta</li>
-                <li>Huevo a la Plancha</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$1049,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Burger Turco Black -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre" id="torreBurger">
-            <div class="div1">
-              <h4>Turco Black</h4>
-              <img src="./assets/burgers/Turco-Black.webp" alt="burger-turco-black">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan Artesanal Negro</li>
-                <li>Huevo a la plancha</li>
-                <li>Medallon de carne</li>
-                <li>Aros de pollo o cebolla</li>
-                <li>Queso cheddar</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$1099,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Turco Burger -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre" id="torreBurger">
-            <div class="div1">
-              <h4>Turco Burger</h4>
-              <img src="./assets/burgers/Turco-Burger.webp" alt="turco-burger">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal moreno</li>
-                <li>Aros de cebolla</li>
-                <li>Chimichurri con ají o <br>
-                    berenjena al escabeche</li>
-                <li>Medallon de carne</li>
-                <li>Queso cheddar</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$1149,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Burger kid -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre" id="torreBurger">
-            <div class="div1">
-              <h4>Burger Kids</h4>
-              <img src="./assets/burgers/Burger-Kids.webp" alt="burger-kids">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal blanco</li>
-                <li>Medallon de carne</li>
-                <li>Queso cheddar</li>
-                <li>1 Juguete a Eleccion</li>
-                <li>Aderesos</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$499,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- Burger Amazona -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre" id="torreBurger">
-            <div class="div1">
-              <h4>Burger Amazona</h4>
-              <img src="./assets/burgers/Amazona.webp" alt="burger-amazona">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal con <br>
-                    semillas de sesamo</li>
-                <li>Tomate</li>
-                <li>Lechuga</li>
-                <li>Medallon de lenteja</li>
-                <li>Cebolla glaseada</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$749,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Burger Selva -->
-          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 bg-dark div-padre" id="torreBurger">
-            <div class="div1">
-              <h4>Burger Selva</h4>
-              <img src="./assets/burgers/Selva.webp" alt="burger-selva">
-            </div>
-            <div class="div2">
-              <p>Ingredientes:</p>
-              <ul>
-                <li>Pan artesanal con <br>
-                    semillas de sesamo y chia</li>
-                <li>Tomate</li>
-                <li>Cebolla Morada</li>
-                <li>Cebolla Blanca</li>
-                <li>Medalllon de espinaca</li>
-                <li>Incluye porcion de papas</li>
-              </ul>
-              <p class="precio">$749,99</p>
-              <div class="div3">
-                <a href="!#" id="comprar">Comprar</a>
-                <a href="!#" id="agregar-al-carrito"><img src="./assets/Logos/agregar-al-carrito.png" alt="icono-agregar-al-carrito"></a>
-              </div>
-            </div>
-          </div>
-
-
+          align-items-sm-center d-md-flex flex-md-column justify-content-md-center align-items-md-center d-lg-flex flex-lg-wrap flex-lg-row justify-content-lg-center
+          align-items-lg-center d-xl-flex flex-xl-wrap flex-xl-row justify-content-xl-center align-items-xl-center d-xxl-flex flex-xxl-wrap flex-xxl-row justify-content-xxl-center align-items-xxl-center" id="contenedor-padre">
+        
         </div>
       </section>
     </main>
@@ -411,7 +172,7 @@
       </div>
     </footer>
 
-    <script src="./script/carrito.js"></script>
+    <script src="./script/appCarrito.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 

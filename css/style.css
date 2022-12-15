@@ -51,17 +51,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
-  top: 70px;
+  top: 85px;
   right: 0;
-  width: 60vw;
-  height: 70vh;
+  width: 100vw;
+  height: 100vh;
   background-color: #212529;
   z-index: 1000000;
 }
@@ -109,6 +106,86 @@ body {
     opacity: 10;
   }
 }
+.contenedor-carrito-hijo {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #41464b;
+  margin: 0 0 20px 0;
+  border-radius: 10px;
+}
+.contenedor-carrito-hijo img {
+  width: 60px;
+}
+.contenedor-carrito-hijo p {
+  color: white;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+.contenedor-carrito-hijo .cantidad {
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+.contenedor-carrito-hijo .total {
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.footer-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 20px 0;
+}
+.footer-carrito p {
+  color: white;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+.footer-carrito .total-de-productos, .footer-carrito .total-de-precios {
+  color: white;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+.txt {
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
 .navbar-dark .navbar-toggler-icon {
   background-image: url(../assets/Logos/MenuBurgers.webp) !important;
 }
@@ -250,7 +327,7 @@ body {
 
 .div-padre {
   width: 80%;
-  height: 800px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,6 +342,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 70px;
+  padding: 10px 0 10px 0;
 }
 
 .div1 {
@@ -292,8 +370,8 @@ body {
   margin: 10px 0 20px 0;
 }
 .div1 img {
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
   border-radius: 100%;
 }
 
@@ -301,6 +379,7 @@ body {
   width: 100%;
   height: auto;
   color: #fff;
+  margin-top: 20px;
 }
 .div2 p {
   margin: 20px 0 20px 20px;
@@ -339,9 +418,9 @@ body {
           align-items: center;
   margin-bottom: 10px;
 }
-.div3 #comprar {
+.div3 .ingredientes {
   display: inline-block;
-  width: 100px;
+  width: 110px;
   margin-right: 10px;
   background: #ffbf47;
   background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
@@ -355,8 +434,9 @@ body {
   text-align: center;
   border-radius: 10px;
   padding: 15px;
+  border-color: transparent;
 }
-.div3 #agregar-al-carrito {
+.div3 .agregar-al-carrito {
   display: inline-block;
   width: 60px;
   height: 54px;
@@ -373,8 +453,9 @@ body {
   text-align: center;
   border-radius: 10px;
   padding: 15px;
+  border-color: transparent;
 }
-.div3 #agregar-al-carrito img {
+.div3 .agregar-al-carrito img {
   width: 30px;
 }
 
@@ -696,7 +777,6 @@ body {
 @media screen and (min-width: 768px) {
   .div-padre {
     width: 400px !important;
-    height: 900px;
   }
   .div1 {
     width: 100%;

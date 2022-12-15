@@ -6,6 +6,7 @@ const btAgregarAlCarrito = document.querySelector(".agregar-al-carrito");
 const totalProductos = document.querySelector(".total-de-productos");
 const totalPrecio = document.querySelector(".total-de-precios");
 const vaciarCarrito = document.getElementById("vaciar-carrito");
+const contadorCarrito = document.querySelector(".numero-de-carrito");
 
 
 //Me Permite acceder al carrito al realizar el click
@@ -78,7 +79,7 @@ const agregarAlCarrito = (id) =>{
         const producto = arrayBurgers.find(e => e.id === id);
         carrito.push(producto);
     }
-    calcularTotal()
+    costoTotal()
     pintarCarrito();
 
 };
@@ -110,8 +111,9 @@ const pintarCarrito = () =>{
         dismunir.addEventListener("click",()=>{
             dismuyendo(e.id)
         })
+        
     })
-    calcularTotal()
+    costoTotal()
 }
 
 // funcion para aumentar un elemento al carrito
@@ -131,7 +133,7 @@ const dismuyendo =(id) =>{
     const burgerEnCarrito =  carrito.find(burger => burger.id === id);
     if (burgerEnCarrito) {
         const acumulador = burgerEnCarrito.cantidad--
-        if (acumulador === 0) {
+        if (acumulador < 1) {
             const indice = carrito.indexOf(id);
             carrito.splice(indice, 1);
         }else{
@@ -150,6 +152,7 @@ vaciarCarrito.addEventListener("click",()=>{
 // funcion para limpiar el array carrito
 const vaciadorCarrito = () =>{
     carrito = [];
+    contenedorPrimarioCarrito.innerHTML = " ";
     pintarCarrito()
 }
 
@@ -162,6 +165,7 @@ const costoTotal = () =>{
         cantidadTotal += producto.cantidad;
     })
     totalPrecio.innerHTML = `$${total}`;
+    contadorCarrito.textContent = cantidadTotal;
     totalProductos.innerHTML = cantidadTotal;
 }
 

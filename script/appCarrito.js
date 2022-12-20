@@ -26,19 +26,28 @@ class Hambuguesas{
 }
 
 // creo los objetos
-const burgerTurquecita = new Hambuguesas(1,"Burger Turquecita","./assets/burgers/Turquecita.webp",850);
-const simpleBurger = new Hambuguesas(2,"Simple Burger","./assets/burgers/Simple-Burger.webp",580);
-const burgerDePollo = new Hambuguesas(3,"Burger de Pollo","./assets/burgers/Burger-de-pollo.webp",750);
-const torreBurger = new Hambuguesas(4,"Torre Burger","./assets/burgers/Torre-Burger.webp",980);
-const burgerTentacion = new Hambuguesas(5,"Burger Tentacion","./assets/burgers/Tentacion.webp",1050);
-const turcoBlack = new Hambuguesas(6,"Turco Black","./assets/burgers/Turco-Black.webp",1100);
-const turcoBurger = new Hambuguesas(7,"Turco Burger","./assets/burgers/Turco-Burger.webp",1150);
-const burgerKids = new Hambuguesas(8,".Burger Kids","./assets/burgers/Burger-Kids.webp",500);
-const burgerAmazona = new Hambuguesas(9,"Burger Amazona","./assets/burgers/Amazona.webp",750);
-const selvaBurger = new Hambuguesas(10,"Selva Burger","./assets/burgers/Selva.webp",950);
+const burgerTurquecita = new Hambuguesas(1,"Burger Turquecita","./assets/burgers/turquecita.webp",850);
+const simpleBurger = new Hambuguesas(2,"Simple Burger","./assets/burgers/simple.webp",580);
+const satanic = new Hambuguesas(3,"Burger de Pollo","./assets/burgers/satanic.webp",750);
+const torreBurger = new Hambuguesas(4,"Torre Burger","./assets/burgers/torre-burger.png",980);
+const burgerTentacion = new Hambuguesas(5,"Burger Tentacion","./assets/burgers/tentacion.webp",1050);
+const turcoBlack = new Hambuguesas(6,"Turco Black","./assets/burgers/black.png",1100);
+const blackWhite = new Hambuguesas(7,"Black & White","./assets/burgers/black&white.png",1150);
+const turcoBurger = new Hambuguesas(8,"Turco Burger","./assets/burgers/turco-burger.webp",1150);
+const burgerKids = new Hambuguesas(9,"Burger Kids","./assets/burgers/burguer-kid.png",500);
+const burgerKidsDoble = new Hambuguesas(10,"Burger Kids Doble","./assets/burgers/burguer-kid-doble.png",600);
+const blueBurger = new Hambuguesas(11,"Blue Burger","./assets/burgers/Blue-Burger.webp",1000);
+const burgerAmazona = new Hambuguesas(12,"Burger Amazona","./assets/burgers/amazon.webp",950);
+const selvaBurger = new Hambuguesas(13,"Selva Burger","./assets/burgers/selva.webp",950);
+const vegeBlack = new Hambuguesas(14,"VegeBlack","./assets/burgers/vegeblack.webp",950);
+const papas1 = new Hambuguesas(15,"Papas Cheese","./assets/burgers/papas-cheese.png",300);
+const papas2 = new Hambuguesas(16,"Papas Baches","./assets/burgers/papas-con-bacon-y-queso.png",400);
+const papas3 = new Hambuguesas(17,"Papas Mix","./assets/burgers/papas-gratinadas-bacon-cheddar-mix-de-queso.png",500);
+const papas4 = new Hambuguesas(18,"Papas Kids","./assets/burgers/papas-kids.webp",200)
+
 
 //Array de productos y Carritos
-const arrayBurgers = [burgerTurquecita, simpleBurger, burgerDePollo, torreBurger, burgerTentacion, turcoBlack, turcoBurger, burgerKids, burgerAmazona, selvaBurger];
+const arrayBurgers = [burgerTurquecita, simpleBurger, satanic, torreBurger, burgerTentacion, turcoBlack, blackWhite, turcoBurger, burgerKids, burgerKidsDoble, blueBurger, burgerAmazona, selvaBurger, vegeBlack, papas1, papas2, papas3, papas4];
 let carrito = [];
 
 
@@ -49,10 +58,10 @@ const pintarBurgers = arrayBurgers.forEach((burger) =>{
     contenedor.innerHTML = 
     `
         <div class="div1">
-            <h4>${burger.nombre}</h4>
             <img src="${burger.img}" alt="${burger.nombre}">
         </div>
         <div class="div2">
+            <h4>${burger.nombre}</h4>
             <p class="precio">$${burger.precio}</p>
             <div class="div3">
                 <button class="ingredientes">Ingredientes</button>
@@ -111,7 +120,6 @@ const pintarCarrito = () =>{
         dismunir.addEventListener("click",()=>{
             dismuyendo(e.id)
         })
-        
     })
     costoTotal()
 }
@@ -152,7 +160,6 @@ vaciarCarrito.addEventListener("click",()=>{
 // funcion para limpiar el array carrito
 const vaciadorCarrito = () =>{
     carrito = [];
-    contenedorPrimarioCarrito.innerHTML = " ";
     pintarCarrito()
 }
 

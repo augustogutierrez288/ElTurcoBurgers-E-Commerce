@@ -1,5 +1,4 @@
 const botonFiltro = document.querySelectorAll(".boton-filtro");
-console.log(botonFiltro)
 
 botonFiltro.forEach((boton) =>{
     boton.addEventListener("click",(e) =>{

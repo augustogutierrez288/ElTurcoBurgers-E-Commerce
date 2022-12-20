@@ -86,7 +86,6 @@ const pintarBurgers = (array) =>{
 pintarBurgers(arrayProductos);
 
 
-
 // funcion para añadir elementos al array carrito.
 const agregarAlCarrito = (id) =>{
     const burgerEnCarrito =  carrito.find(e => e.id === id);
@@ -94,6 +93,7 @@ const agregarAlCarrito = (id) =>{
         burgerEnCarrito.cantidad++;
     }else{
         const producto = arrayProductos.find(e => e.id === id);
+        producto.cantidad = 1
         carrito.push(producto);
     }
     costoTotal()
@@ -113,13 +113,13 @@ const pintarCarrito = () =>{
             <p>${e.nombre}</p>
             <button class="btn btn-warning" id="aumentar${e.id}">+</button>
             <p class="cantidad">${e.cantidad}</p>
-            <button class="btn btn-danger" id="eliminar${e.id}">-</button>
+            <button class="btn btn-danger" id="${e.id}">-</button>
             <p class="total">$${e.precio * e.cantidad}</p>
         `
         contenedorPrimarioCarrito.appendChild(ctCarritoHijo);
 
         const aumentar = document.getElementById(`aumentar${e.id}`);
-        const dismunir = document.getElementById(`eliminar${e.id}`);
+        const dismunir = document.getElementById(e.id);
 
         aumentar.addEventListener("click",()=>{
             aumentando(e.id)
@@ -139,19 +139,26 @@ const aumentando = (id) =>{
         const acumulador = burgerEnCarrito.cantidad++
         const cantidad = document.querySelector(".cantidad");
         cantidad.innerHTML= acumulador
-        contenedorPrimarioCarrito.appendChild(cantidad);
     }
     pintarCarrito()
 }
+
+const eliminarDelCarrito = (id) => {
+    const producto = carrito.find( producto => producto.id === id);
+    const indice = carrito.indexOf(producto);
+    carrito.splice(indice, 1);
+
+    pintarCarrito();
+}
+
 
 // funcion para dismunir y eliminar 
 const dismuyendo =(id) =>{
     const burgerEnCarrito =  carrito.find(burger => burger.id === id);
     if (burgerEnCarrito) {
         const acumulador = burgerEnCarrito.cantidad--
-        if (acumulador == 1) {
-            const indice = carrito.indexOf(id);
-            carrito.splice(indice, 1);
+        if (acumulador <= 1) {
+            eliminarDelCarrito(id);
         }else{
             const cantidad = document.querySelector(".cantidad");
             cantidad.innerHTML= acumulador
@@ -167,7 +174,7 @@ vaciarCarrito.addEventListener("click",()=>{
 
 // funcion para limpiar el array carrito
 const vaciadorCarrito = () =>{
-    carrito = [];
+    carrito.length = 0;
     pintarCarrito()
 }
 

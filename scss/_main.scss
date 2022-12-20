@@ -1,3 +1,29 @@
+.filtro{
+    margin: 50px 0 0 0;
+    padding: 0;
+}
+
+.boton-filtro{
+    display: block;
+    margin: 5px;
+    padding: 15px;
+    width: 150px;
+    color: #000;
+    background-color: #fff;
+    opacity: 0.6;
+    border-color: transparent;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    cursor: pointer;
+}
+.boton-filtro.active{
+    opacity: 1;
+}
+
+
 .div-padre{
     width: 80%;
     height: auto;

@@ -86,6 +86,12 @@
 
     <main class="container-fluid p-0" id="burgers">
       <section class="row" style="margin: 50px 0 0 0">
+        <div class="filtro col-12 d-flex justify-content-center align-items-center">
+          <button id="todos" class="boton-filtro active">Todos</button>
+          <button id="carne" class="boton-filtro">Carne</button>
+          <button id="vegetariana" class="boton-filtro">Vegetariana</button>
+          <button id="papas" class="boton-filtro">Papas</button>
+        </div>
         <div class="d-flex flex-column justify-content-center align-items-center d-sm-flex flex-sm-column justify-content-sm-center 
           align-items-sm-center d-md-flex flex-md-column justify-content-md-center align-items-md-center d-lg-flex flex-lg-wrap flex-lg-row justify-content-lg-center
           align-items-lg-center d-xl-flex flex-xl-wrap flex-xl-row justify-content-xl-center align-items-xl-center d-xxl-flex flex-xxl-wrap flex-xxl-row justify-content-xxl-center align-items-xxl-center" id="contenedor-padre">
@@ -171,9 +177,10 @@
       </div>
     </footer>
 
-    <script src="./script/appCarrito.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./script/appCarrito.js"></script>
+    <script src="./script/appFiltro.js"></script>
 
 </body>
 </html>

@@ -15,12 +15,12 @@
 
 .numero-de-carrito{
     color: white;
-    font-size: 1.1rem;
+    font-size: 12px;
     font-weight: 300;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     position: absolute;
-    top: 36px;
-    right: 80px;
+    top: 20px;
+    right: 90px;
 }
 
 .contenedor-carrito{
@@ -130,3 +130,35 @@
     margin-right: 5px !important;
     text-align: right !important;
 }
+
+// .notificacion-producto{
+//     font-size: 14px;
+//     font-family: "Roboto", sans-serif;
+//     font-weight: 400;
+//     color: #dee2e6eb;
+//     background-color: #09adad;
+//     border-radius: 50px;
+//     position: fixed;
+//     top: 5px;
+//     right: 5px;
+//     width: 200px;
+//     height: 50px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 111111;
+// }
+
+// .active{
+//     display: none !important;
+//     animation-name: animacion-notificacion;
+//     animation-duration: 1.5s;
+// }
+
+// @keyframes animacion-notificacion {
+//     0%{ opacity: 1;}
+//     25%{ opacity: .7; }
+//     50%{ opacity: .5;}
+//     75%{ opacity: .3;}
+//     100%{ display: 0;}
+// }

@@ -34,12 +34,12 @@ body {
 
 .numero-de-carrito {
   color: white;
-  font-size: 1.1rem;
+  font-size: 12px;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
   position: absolute;
-  top: 36px;
-  right: 80px;
+  top: 20px;
+  right: 90px;
 }
 
 .contenedor-carrito {
@@ -370,6 +370,8 @@ body {
   margin-top: 70px;
   padding: 10px 0 10px 0;
   border: #212529 solid;
+  -webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .div1 {
@@ -747,8 +749,9 @@ body {
     right: 30px;
   }
   .numero-de-carrito {
-    top: 36px;
-    right: 15px;
+    top: 19px;
+    right: 20px;
+    font-size: 12px;
   }
   .navbar-expand-lg .navbar-collapse {
     -webkit-box-pack: end !important;

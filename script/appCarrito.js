@@ -57,6 +57,9 @@ const pintarBurgers = (array) =>{
     contenedorPadre.innerHTML = " ";
     array.forEach((burger) =>{
         const contenedor = document.createElement("div");
+        const dataOs = document.createAttribute("data-aos");
+        dataOs.value = "fade-up";
+        contenedor.setAttributeNode(dataOs);
         contenedor.classList.add("col-12", "col-sm-12", "col-md-12", "col-lg-4", "col-xl-4", "col-xxl-4", "bg-dark", "div-padre");
         contenedor.innerHTML = 
         `
@@ -85,6 +88,14 @@ const pintarBurgers = (array) =>{
 
 pintarBurgers(arrayProductos);
 
+// function notificacion(){
+//     const notificacion = document.getElementById("notificacion");
+//     if(notificacion.classList.contains("notificacion-producto")){
+//         notificacion.classList.remove("notificacion-producto");
+//     }else{
+//         notificacion.classList.add("notificacion-producto");
+//     }
+// }
 
 // funcion para añadir elementos al array carrito.
 const agregarAlCarrito = (id) =>{

@@ -50,16 +50,17 @@ const papas4 = new Hambuguesas(18,"Papas Kids","./assets/burgers/papas-kids.webp
 //Array de productos y Carritos
 const arrayProductos = [burgerTurquecita, simpleBurger, satanic, torreBurger, burgerTentacion, turcoBlack, blackWhite, turcoBurger, burgerKids, burgerKidsDoble, blueBurger, burgerAmazona, selvaBurger, vegeBlack, papas1, papas2, papas3, papas4];
 let carrito = [];
-
-
+if(localStorage.getItem("carrito")) {
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+}
 // funcion para pintar el index con los objetos creados.
 const pintarBurgers = (array) =>{
     contenedorPadre.innerHTML = " ";
     array.forEach((burger) =>{
         const contenedor = document.createElement("div");
-        const dataOs = document.createAttribute("data-aos");
-        dataOs.value = "fade-up";
-        contenedor.setAttributeNode(dataOs);
+        const dataAos = document.createAttribute("data-aos");
+        dataAos.value = "fade-up";
+        contenedor.setAttributeNode(dataAos);
         contenedor.classList.add("col-12", "col-sm-12", "col-md-12", "col-lg-4", "col-xl-4", "col-xxl-4", "bg-dark", "div-padre");
         contenedor.innerHTML = 
         `
@@ -79,42 +80,67 @@ const pintarBurgers = (array) =>{
     
         // boton agregar al carrito 
         const boton = document.getElementById(`boton${burger.id}`);
-    
         boton.addEventListener("click",() =>{
             agregarAlCarrito(burger.id);
+        
+            Toastify({
+                text: "Producto Añadido al Carrito",
+                duration: 1000,
+                gravity: "top",
+                position: "right", 
+                stopOnFocus: true, 
+                style: {
+                    background: "#09adad",
+                    width: "220px",
+                    fontSize: "14px",
+                    fontFamily: '"Roboto", sans-serif',
+                    fontWeight: "300",
+                    textAlign: "center",
+                    borderRadius: "50px",
+                },
+            }).showToast();
         });
     });
 }
 
 pintarBurgers(arrayProductos);
 
-// function notificacion(){
-//     const notificacion = document.getElementById("notificacion");
-//     if(notificacion.classList.contains("notificacion-producto")){
-//         notificacion.classList.remove("notificacion-producto");
-//     }else{
-//         notificacion.classList.add("notificacion-producto");
-//     }
-// }
 
 // funcion para añadir elementos al array carrito.
 const agregarAlCarrito = (id) =>{
     const burgerEnCarrito =  carrito.find(e => e.id === id);
     if(burgerEnCarrito){
         burgerEnCarrito.cantidad++;
+        localStorage.setItem("carrito", JSON.stringify(carrito));
     }else{
         const producto = arrayProductos.find(e => e.id === id);
         producto.cantidad = 1
         carrito.push(producto);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
     }
     costoTotal()
     pintarCarrito();
 
+
 };
+
+function title(){
+    if(carrito.length == 0){
+        contenedorPrimarioCarrito.innerHTML = " ";
+        const h4 = document.createElement("h4");
+        h4.classList.add("title");
+        h4.textContent = "Carrito Vacio, comienza a comprar"
+        contenedorPrimarioCarrito.appendChild(h4);
+    }
+}
+
+title()
 
 // funcion que permite mostrar los elementos cargados en el array carrito.
 const pintarCarrito = () =>{
+    
     contenedorPrimarioCarrito.innerHTML= " "
+
     carrito.forEach((e) =>{
         const ctCarritoHijo = document.createElement("div");
         ctCarritoHijo.classList.add("contenedor-carrito-hijo");
@@ -141,6 +167,10 @@ const pintarCarrito = () =>{
         })
     })
     costoTotal()
+
+    if (carrito.length > 6){
+        contenedorCarrito.style.height = "auto";
+    }
 }
 
 // funcion para aumentar un elemento al carrito
@@ -150,6 +180,7 @@ const aumentando = (id) =>{
         const acumulador = burgerEnCarrito.cantidad++
         const cantidad = document.querySelector(".cantidad");
         cantidad.innerHTML= acumulador
+        localStorage.setItem("carrito",JSON.stringify(carrito));
     }
     pintarCarrito()
 }
@@ -158,10 +189,9 @@ const eliminarDelCarrito = (id) => {
     const producto = carrito.find( producto => producto.id === id);
     const indice = carrito.indexOf(producto);
     carrito.splice(indice, 1);
-
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     pintarCarrito();
 }
-
 
 // funcion para dismunir y eliminar 
 const dismuyendo =(id) =>{
@@ -174,9 +204,14 @@ const dismuyendo =(id) =>{
             const cantidad = document.querySelector(".cantidad");
             cantidad.innerHTML= acumulador
             contenedorPrimarioCarrito.appendChild(cantidad);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
         }
     }
     pintarCarrito()
+
+    if (carrito.length == 0) {
+        title()
+    }
 }
 
 vaciarCarrito.addEventListener("click",()=>{
@@ -187,6 +222,9 @@ vaciarCarrito.addEventListener("click",()=>{
 const vaciadorCarrito = () =>{
     carrito.length = 0;
     pintarCarrito()
+    title()
+
+    localStorage.clear();
 }
 
 // funcion para calcular costo total.

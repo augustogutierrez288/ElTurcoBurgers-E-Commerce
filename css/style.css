@@ -749,6 +749,206 @@ body {
   width: 390px;
 }
 
+.body-loguin {
+  min-height: 100vh !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  width: 380px;
+  height: 420px;
+  top: -50%;
+  left: -50%;
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.box::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  width: 380px;
+  height: 420px;
+  top: -50%;
+  left: -50%;
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+form {
+  position: absolute;
+  inset: 3px;
+  z-index: 2;
+  padding: 50px 40px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.title-form {
+  color: #ffbf47;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.p-form {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #8f8f8f;
+  margin: 10px 0 10px 0;
+  padding: 0 10px 0 10px;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.inputBox input:focus ~ span, .inputBox input:valid ~ span {
+  color: #ffbf47;
+  -webkit-transform: translateX(0px) translateY(-34px);
+          transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #ffbf47;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputBox input:focus ~ i, .inputBox input:valid ~ i {
+  height: 44px;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  -webkit-text-decoration: beige;
+          text-decoration: beige;
+}
+
+.links a:hover, .links a:nth-child(2) {
+  color: #ffbf47;
+}
+
+input[type=submit] {
+  border: none;
+  outline: none;
+  padding: 11px 25px;
+  background: #ffbf47;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  margin-top: 10px;
+}
+
+input[type=submit]:active {
+  opacity: 0.8;
+}
+
 @media screen and (min-width: 992px) {
   .espaciado {
     margin-right: 45px !important;

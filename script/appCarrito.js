@@ -30,20 +30,20 @@ class Hambuguesas{
 const burgerTurquecita = new Hambuguesas(1,"Burger Turquecita","./assets/burgers/turquecita.webp",850,"carne");
 const simpleBurger = new Hambuguesas(2,"Simple Burger","./assets/burgers/simple.webp",580,"carne");
 const satanic = new Hambuguesas(3,"Burger de Pollo","./assets/burgers/satanic.webp",750,"carne");
-const torreBurger = new Hambuguesas(4,"Torre Burger","./assets/burgers/torre-burger.png",980,"carne");
+const torreBurger = new Hambuguesas(4,"Torre Burger","./assets/burgers/torre-burger.webp",980,"carne");
 const burgerTentacion = new Hambuguesas(5,"Burger Tentacion","./assets/burgers/tentacion.webp",1050,"carne");
-const turcoBlack = new Hambuguesas(6,"Turco Black","./assets/burgers/black.png",1100,"carne");
-const blackWhite = new Hambuguesas(7,"Black & White","./assets/burgers/black&white.png",1150,"carne");
+const turcoBlack = new Hambuguesas(6,"Turco Black","./assets/burgers/black.webp",1100,"carne");
+const blackWhite = new Hambuguesas(7,"Black & White","./assets/burgers/black_white.webp",1150,"carne");
 const turcoBurger = new Hambuguesas(8,"Turco Burger","./assets/burgers/turco-burger.webp",1150,"carne");
-const burgerKids = new Hambuguesas(9,"Burger Kids","./assets/burgers/burguer-kid.png",500, "carne");
-const burgerKidsDoble = new Hambuguesas(10,"Burger Kids Doble","./assets/burgers/burguer-kid-doble.png",600,"carne");
+const burgerKids = new Hambuguesas(9,"Burger Kids","./assets/burgers/burguer-kid.webp",500, "carne");
+const burgerKidsDoble = new Hambuguesas(10,"Burger Kids Doble","./assets/burgers/burguer-kid-doble.webp",600,"carne");
 const blueBurger = new Hambuguesas(11,"Blue Burger","./assets/burgers/Blue-Burger.webp",1000,"carne");
 const burgerAmazona = new Hambuguesas(12,"Burger Amazona","./assets/burgers/amazon.webp",950,"vegetariana");
 const selvaBurger = new Hambuguesas(13,"Selva Burger","./assets/burgers/selva.webp",950,"vegetariana");
 const vegeBlack = new Hambuguesas(14,"VegeBlack","./assets/burgers/vegeblack.webp",950,"vegetariana");
-const papas1 = new Hambuguesas(15,"Papas Cheese","./assets/burgers/papas-cheese.png",300,"papas");
-const papas2 = new Hambuguesas(16,"Papas Baches","./assets/burgers/papas-con-bacon-y-queso.png",400,"papas");
-const papas3 = new Hambuguesas(17,"Papas Mix","./assets/burgers/papas-gratinadas-bacon-cheddar-mix-de-queso.png",500,"papas");
+const papas1 = new Hambuguesas(15,"Papas Cheese","./assets/burgers/papas-cheese.webp",300,"papas");
+const papas2 = new Hambuguesas(16,"Papas Baches","./assets/burgers/papas-con-bacon-y-queso.webp",400,"papas");
+const papas3 = new Hambuguesas(17,"Papas Mix","./assets/burgers/papas-gratinadas-bacon-cheddar-mix-de-queso.webp",500,"papas");
 const papas4 = new Hambuguesas(18,"Papas Kids","./assets/burgers/papas-kids.webp",200,"papas");
 
 

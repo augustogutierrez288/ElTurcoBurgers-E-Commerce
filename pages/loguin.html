@@ -18,25 +18,28 @@
     <title>El Turco Burguers - Iniciar Sesion</title>
 </head>
 <body class="body-loguin d-flex flex-column justify-content-center align-items-center p-0 m-0 bg-dark">
-	<div class="box">
-		<form class="bg-dark" autocomplete="off">
-            <p class="p-form">El Turco Burgers</p>
-			<h2 class="title-form">Iniciar Sesion</h2>
-			<div class="inputBox">
-				<input type="text" required>
-				<span>Correo Electronico</span>
-				<i></i>
-			</div>
-			<div class="inputBox">
-				<input type="password" required>
-				<span>Contraseña</span>
-				<i></i>
-			</div>
-			<div class="links">
-				<a href="#">¿Olvidaste tu contraseña?</a>
-				<a href="#">Crearme una cuenta</a>
-			</div>
-			<input type="submit" value="Login">
+    <a href="../index.html" id="volver">Volver</a>
+	<div class="box" id="box">
+		<form action=" " method="post" class="bg-dark" autocomplete="on">
+            <fieldset>
+                <p class="p-form">El Turco Burgers</p>
+                <h2 class="title-form">Iniciar Sesion</h2>
+                <div class="inputBox">
+                    <input type="email" id="email-user" required>
+                    <span>Correo Electronico</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    <input type="password" id="password-user" required>
+                    <span>Contraseña</span>
+                    <i></i>
+                </div>
+                <div class="links">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <a href="#" id="crear-usuario">Crearme una cuenta</a>
+                </div>
+                <input type="submit" id="login" value="Login">
+            </fieldset>
 		</form>
 	</div>
 
@@ -47,3 +50,4 @@
     <script src="../script/loguin.js"></script>
 </body>
 </html>
+

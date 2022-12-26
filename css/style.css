@@ -750,11 +750,11 @@ body {
 }
 
 .body-loguin {
-  min-height: 100vh !important;
+  min-height: 80vh !important;
   font-family: "Roboto", sans-serif !important;
 }
 
-.box {
+.box, .box2 {
   position: relative;
   width: 380px;
   height: 420px;
@@ -763,7 +763,46 @@ body {
   overflow: hidden;
 }
 
-.box::before {
+.box2 {
+  height: 700px !important;
+  top: 115px !important;
+}
+.box2::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  width: 380px;
+  height: 850px !important;
+  top: -50%;
+  left: -50%;
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+.box2::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  width: 380px;
+  height: 850px !important;
+  top: -50%;
+  left: -50%;
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+
+.box::before, .box2::before {
   content: "";
   z-index: 1;
   position: absolute;
@@ -780,7 +819,7 @@ body {
           transform-origin: bottom right;
 }
 
-.box::after {
+.box::after, .box2::after {
   content: "";
   z-index: 1;
   position: absolute;
@@ -927,9 +966,24 @@ form {
   color: #8f8f8f;
   -webkit-text-decoration: beige;
           text-decoration: beige;
+  cursor: pointer;
+}
+.links a:hover, .links a:nth-child(2) {
+  color: #ffbf47;
 }
 
-.links a:hover, .links a:nth-child(2) {
+#login-user {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  -webkit-text-decoration: beige;
+          text-decoration: beige;
+  cursor: pointer;
+  position: absolute;
+  right: 60px;
+  bottom: 140px;
+}
+#login-user:hover, #login-user:nth-child(2) {
   color: #ffbf47;
 }
 
@@ -938,6 +992,8 @@ input[type=submit] {
   outline: none;
   padding: 11px 25px;
   background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
   cursor: pointer;
   border-radius: 4px;
   font-weight: 600;
@@ -949,7 +1005,47 @@ input[type=submit]:active {
   opacity: 0.8;
 }
 
+.create-user {
+  border: none;
+  outline: none;
+  padding: 11px 25px;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 40px !important;
+  width: 160px !important;
+}
+.create-user:active {
+  opacity: 0.8;
+}
+
+#volver {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  margin: 10px;
+  background: #ffbf47;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
+  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+
 @media screen and (min-width: 992px) {
+  .body-loguin {
+    min-height: 100vh !important;
+  }
   .espaciado {
     margin-right: 45px !important;
   }

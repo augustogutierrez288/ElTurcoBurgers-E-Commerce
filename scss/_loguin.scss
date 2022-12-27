@@ -175,21 +175,6 @@ form{
     }
 }
 
-#login-user{
-    margin: 10px 0;
-    font-size: 0.75em;
-    color: #8f8f8f;
-    text-decoration: beige;
-    cursor: pointer;
-    position: absolute;
-    right: 60px;
-    bottom: 140px;
-    &:hover, &:nth-child(2){
-        color: #ffbf47;
-    }
-}
-
-
 input[type="submit"]{
     border: none;
     outline: none;
@@ -202,9 +187,9 @@ input[type="submit"]{
     font-weight: 600;
     width: 100px;
     margin-top: 10px;
-}
-input[type="submit"]:active{
-    opacity: .8;
+    &:active{
+        opacity: .8;
+    }
 }
 
 .create-user{

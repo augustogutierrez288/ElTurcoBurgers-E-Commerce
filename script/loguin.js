@@ -11,33 +11,30 @@ crearUser.addEventListener("click", () => {
             <fieldset>
                 <p class="p-form">El Turco Burgers</p>
                 <h2 class="title-form">Crear Usuario</h2>
-                <div class="inputBox">
+                <div class="inputBox ">
                     <input type="name" id="name-user" required>
                     <span>Nombre</span>
                     <i></i>
                 </div>
-                <div class="inputBox">
+                <div class="inputBox pa-1">
                     <input type="name" id="lastname-user" required>
                     <span>Apellido</span>
                     <i></i>
                 </div>
-                <div class="inputBox">
+                <div class="inputBox pa-2">
                     <input type="name" id="username" required>
                     <span>@Usuario</span>
                     <i></i>
                 </div>
-                <div class="inputBox">
+                <div class="inputBox pa-3">
                     <input type="email" id="email-user" required>
                     <span>Correo Electronico</span>
                     <i></i>
                 </div>
-                <div class="inputBox">
+                <div class="inputBox pa-4">
                     <input type="password" id="password-user" required>
                     <span>Contraseña</span>
                     <i></i>
-                </div>
-                <div class="links">
-                    <a href="./loguin.html" id="login-user">Iniciar Sesion</a>
                 </div>
                 <input type="submit" class="create-user" id="usuario-creado" value="Crear Usuario">
             </fieldset>

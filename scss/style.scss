@@ -8,6 +8,53 @@
 
 
 @media screen and (min-width: 992px) {
+    .inputBox i {
+        width: 250px;
+    }
+
+    .inputBox input{
+        width: 250px;
+    }
+
+    .box2{
+        height: 500px !important;
+        width: 700px !important;
+        top: 9px !important;
+        &::before{
+            width: 700px !important;
+            height: 500px !important;
+        }
+        &::after{
+            width: 700px !important;
+            height: 500px !important;
+        }
+    }
+    .pa-1{
+        position: absolute;
+        top: 128px;
+        right: 20px;
+    }
+    .pa-2{
+        position: absolute;
+        top: 220px;
+        right: 20px;
+    }
+    .pa-3{
+        position: absolute;
+        top: 220px;
+        left: 40px;
+    }
+    .pa-4{
+        position: absolute;
+        top: 300px;
+        left: 40px;
+    }
+
+    .create-user{
+        position: absolute;
+        top: 310px;
+        right: 110px;
+    }
     .body-loguin{
         min-height: 100vh !important;
     }

@@ -972,21 +972,6 @@ form {
   color: #ffbf47;
 }
 
-#login-user {
-  margin: 10px 0;
-  font-size: 0.75em;
-  color: #8f8f8f;
-  -webkit-text-decoration: beige;
-          text-decoration: beige;
-  cursor: pointer;
-  position: absolute;
-  right: 60px;
-  bottom: 140px;
-}
-#login-user:hover, #login-user:nth-child(2) {
-  color: #ffbf47;
-}
-
 input[type=submit] {
   border: none;
   outline: none;
@@ -1000,7 +985,6 @@ input[type=submit] {
   width: 100px;
   margin-top: 10px;
 }
-
 input[type=submit]:active {
   opacity: 0.8;
 }
@@ -1043,6 +1027,50 @@ input[type=submit]:active {
 }
 
 @media screen and (min-width: 992px) {
+  .inputBox i {
+    width: 250px;
+  }
+  .inputBox input {
+    width: 250px;
+  }
+  .box2 {
+    height: 500px !important;
+    width: 700px !important;
+    top: 9px !important;
+  }
+  .box2::before {
+    width: 700px !important;
+    height: 500px !important;
+  }
+  .box2::after {
+    width: 700px !important;
+    height: 500px !important;
+  }
+  .pa-1 {
+    position: absolute;
+    top: 128px;
+    right: 20px;
+  }
+  .pa-2 {
+    position: absolute;
+    top: 220px;
+    right: 20px;
+  }
+  .pa-3 {
+    position: absolute;
+    top: 220px;
+    left: 40px;
+  }
+  .pa-4 {
+    position: absolute;
+    top: 300px;
+    left: 40px;
+  }
+  .create-user {
+    position: absolute;
+    top: 310px;
+    right: 110px;
+  }
   .body-loguin {
     min-height: 100vh !important;
   }

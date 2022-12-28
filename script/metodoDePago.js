@@ -11,6 +11,35 @@ const cardCVC = document.querySelector("#card-cvc");
 const form = document.querySelector("#form");
 const thankYou = document.querySelector("#thank-you");
 const buttonContinue = document.querySelector("#continue");
+const contenedorCard = document.querySelector(".container-card");
+
+const arrayCard = [
+    {
+        ruta : "../assets/pagos/JCB_logo.svg.png",
+        id : "jcb"
+    },
+    {
+        ruta : "../assets/pagos/Discover-logo.png",
+        id : "discover"
+    },
+    {
+        ruta : "../assets/Logos/amex.png",
+        id : "amex"
+    },
+    {
+        ruta : "../assets/Logos/diners.png",
+        id : "diners"
+    },
+    {
+        ruta : "../assets/Logos/visa.png",
+        id : "visa"
+    },
+    {
+        ruta : "../assets/Logos/mastercard.png",
+        id : "mastercard"
+    },
+    
+]
 
 inputName.addEventListener("input", () => {
     cardName.innerText = inputName.value;
@@ -20,12 +49,23 @@ inputName.addEventListener("input", () => {
     }
 })
 
+//Libreria Cleave.js
 var cleave = new Cleave('.input-number', {
     creditCard: true,
     onCreditCardTypeChanged: function (type) {
-        console.log(type)
+        pintarCard(type)
     }
 });
+
+// funcion que recorre un array y pinta si el id es identico al type de Clave.js
+const pintarCard = (type) =>{
+    const card =  arrayCard.find(e => e.id === type);
+    if(card){
+        contenedorCard.innerHTML = `<img src="${card.ruta}" alt="${card.id}">`;
+    }else{
+        contenedorCard.innerHTML = " ";
+    }
+};
 
 inputNumber.addEventListener("input", () => {
     cardNumber.innerText = inputNumber.value;

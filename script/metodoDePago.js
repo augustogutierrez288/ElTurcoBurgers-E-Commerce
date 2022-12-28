@@ -13,6 +13,7 @@ const thankYou = document.querySelector("#thank-you");
 const buttonContinue = document.querySelector("#continue");
 const contenedorCard = document.querySelector(".container-card");
 
+
 const arrayCard = [
     {
         ruta : "../assets/pagos/JCB_logo.svg.png",
@@ -114,4 +115,30 @@ buttonContinue.addEventListener("click", () => {
     cardMonth.innerText = "00";
     cardYear.innerText = "00";
     cardCVC.innerText = "000";
+})
+
+
+let valoresCarrito = [];
+if(localStorage.getItem("carrito")) {
+    valoresCarrito = JSON.parse(localStorage.getItem("carrito"));
+}
+
+const pProduct = document.querySelector(".p-product");
+const pTotal = document.querySelector(".p-total");
+
+valoresCarrito.forEach((e) =>{
+    pProduct.innerHTML = "$0 ";
+    pTotal.innerHTML = "$0";
+    let sumaProducto = e.cantidad * e.precio
+    let sumaTotal = sumaProducto + 300
+    pProduct.innerHTML = `$${sumaProducto}`;
+    pTotal.innerHTML = `$${sumaTotal}`
+
+})
+
+const btnConfirm = document.getElementById("btn-confirm");
+btnConfirm.addEventListener("click", () => {
+    localStorage.clear()
+    pProduct.innerHTML = "$0";
+    pTotal.innerHTML = "$0";
 })

@@ -116,6 +116,14 @@ body {
     font-size: .75rem;
 }
 
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -227,6 +235,29 @@ body {
 }
 
 
+.table{
+    width: 280px;
+    height: auto;
+    background-color: #fff;
+    opacity: .6;
+    color: #212529;
+    border: 2px solid rgb(206, 205, 205);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 30px 0;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+}
+
+td{
+    width: 150px;
+}
+
+tr{
+    height: 25px;
+}
 
 @media screen and (min-width: 800px) {
 
@@ -260,7 +291,8 @@ body {
 
     .form-wrapper {
         display: flex;
-        justify-content: start;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         margin-right: auto;
     }

@@ -49,10 +49,15 @@ const papas4 = new Hambuguesas(18,"Papas Kids","./assets/burgers/papas-kids.webp
 
 //Array de productos y Carritos
 const arrayProductos = [burgerTurquecita, simpleBurger, satanic, torreBurger, burgerTentacion, turcoBlack, blackWhite, turcoBurger, burgerKids, burgerKidsDoble, blueBurger, burgerAmazona, selvaBurger, vegeBlack, papas1, papas2, papas3, papas4];
+
 let carrito = [];
+
 if(localStorage.getItem("carrito")) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
+    pintarCarrito(carrito);
 }
+
+
 // funcion para pintar el index con los objetos creados.
 const pintarBurgers = (array) =>{
     contenedorPadre.innerHTML = " ";
@@ -77,7 +82,7 @@ const pintarBurgers = (array) =>{
             </div>
         `
         contenedorPadre.appendChild(contenedor);
-    
+
         // boton agregar al carrito 
         const boton = document.getElementById(`boton${burger.id}`);
         boton.addEventListener("click",() =>{
@@ -107,7 +112,7 @@ pintarBurgers(arrayProductos);
 
 
 // funcion para añadir elementos al array carrito.
-const agregarAlCarrito = (id) =>{
+function agregarAlCarrito(id){
     const burgerEnCarrito =  carrito.find(e => e.id === id);
     if(burgerEnCarrito){
         burgerEnCarrito.cantidad++;
@@ -119,7 +124,7 @@ const agregarAlCarrito = (id) =>{
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }
     costoTotal()
-    pintarCarrito();
+    pintarCarrito(carrito);
 
 
 };
@@ -134,38 +139,43 @@ function title(){
     }
 }
 
-title()
+
 
 // funcion que permite mostrar los elementos cargados en el array carrito.
-const pintarCarrito = () =>{
+function pintarCarrito(array){
+    if( carrito && carrito.length > 0){
+
+        contenedorPrimarioCarrito.innerHTML= " "
+
+        array.forEach((e) =>{
+            const ctCarritoHijo = document.createElement("div");
+            ctCarritoHijo.classList.add("contenedor-carrito-hijo");
+            ctCarritoHijo.innerHTML = 
+            `
+                <img src="${e.img}" alt="${e.nombre}">
+                <p>${e.nombre}</p>
+                <button class="btn btn-warning" id="aumentar${e.id}">+</button>
+                <p class="cantidad">${e.cantidad}</p>
+                <button class="btn btn-danger" id="${e.id}">-</button>
+                <p class="total">$${e.precio * e.cantidad}</p>
+            `
+            contenedorPrimarioCarrito.appendChild(ctCarritoHijo);
+
+            const aumentar = document.getElementById(`aumentar${e.id}`);
+            const dismunir = document.getElementById(e.id);
+
+            aumentar.addEventListener("click",()=>{
+                aumentando(e.id)
+            })
+
+            dismunir.addEventListener("click",()=>{
+                dismuyendo(e.id)
+            })
+        })
+    }else{
+        title()
+    }
     
-    contenedorPrimarioCarrito.innerHTML= " "
-
-    carrito.forEach((e) =>{
-        const ctCarritoHijo = document.createElement("div");
-        ctCarritoHijo.classList.add("contenedor-carrito-hijo");
-        ctCarritoHijo.innerHTML = 
-        `
-            <img src="${e.img}" alt="${e.nombre}">
-            <p>${e.nombre}</p>
-            <button class="btn btn-warning" id="aumentar${e.id}">+</button>
-            <p class="cantidad">${e.cantidad}</p>
-            <button class="btn btn-danger" id="${e.id}">-</button>
-            <p class="total">$${e.precio * e.cantidad}</p>
-        `
-        contenedorPrimarioCarrito.appendChild(ctCarritoHijo);
-
-        const aumentar = document.getElementById(`aumentar${e.id}`);
-        const dismunir = document.getElementById(e.id);
-
-        aumentar.addEventListener("click",()=>{
-            aumentando(e.id)
-        })
-
-        dismunir.addEventListener("click",()=>{
-            dismuyendo(e.id)
-        })
-    })
     costoTotal()
 
     if (carrito.length > 6){
@@ -182,7 +192,7 @@ const aumentando = (id) =>{
         cantidad.innerHTML= acumulador
         localStorage.setItem("carrito",JSON.stringify(carrito));
     }
-    pintarCarrito()
+    pintarCarrito(carrito)
 }
 
 const eliminarDelCarrito = (id) => {
@@ -190,7 +200,7 @@ const eliminarDelCarrito = (id) => {
     const indice = carrito.indexOf(producto);
     carrito.splice(indice, 1);
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    pintarCarrito();
+    pintarCarrito(carrito);
 }
 
 // funcion para dismunir y eliminar 
@@ -207,11 +217,7 @@ const dismuyendo =(id) =>{
             localStorage.setItem("carrito", JSON.stringify(carrito));
         }
     }
-    pintarCarrito()
-
-    if (carrito.length == 0) {
-        title()
-    }
+    pintarCarrito(carrito)
 }
 
 vaciarCarrito.addEventListener("click",()=>{
@@ -221,14 +227,13 @@ vaciarCarrito.addEventListener("click",()=>{
 // funcion para limpiar el array carrito
 const vaciadorCarrito = () =>{
     carrito.length = 0;
-    pintarCarrito()
-    title()
+    pintarCarrito(carrito)
 
     localStorage.clear();
 }
 
 // funcion para calcular costo total.
-const costoTotal = () =>{
+function costoTotal(){
     let total = 0;
     let cantidadTotal = 0;
     carrito.forEach((producto) =>{

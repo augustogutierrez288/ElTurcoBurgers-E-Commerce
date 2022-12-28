@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/Logos/ElTurcoBurgers-Logo.ico">
   <title>El Turco Burgers - Metodo de Pago</title>
   <link rel="stylesheet" href="../css/style-cobro.css">
 </head>
 <body>
 
   <main class="wrapper">
-
+    <!--Contiene las Card-->
     <div class="card">
       <div class="card-front">
         <img src="../assets/pagos/frente-card.webp" alt="Frente-de-la-tarjeta">
@@ -36,8 +36,26 @@
         </div>
       </div>
     </div>
-
+    <!--Contiene el formulario y la tabla-->
     <div class="form-wrapper">
+
+      <table class="table" id="table">
+        <tbody>
+          <tr class="fila1">
+            <td>Total Producto</td>
+            <td class="p-product">$0</td>
+          </tr>
+          <tr class="fila2">
+            <td>Costo de Envio</td>
+            <td>$300</td>
+          </tr>
+          <tr class="fila3">
+            <td>Total a Pagar</td>
+            <td class="p-total">$0</td>
+          </tr>
+        </tbody>
+      </table>
+
       <form class="form" id="form">
         <div class="form-group">
           <label for="input-name" class="label">Nombre Completo</label>
@@ -61,10 +79,14 @@
           </div>
         </div>
         <div class="form-group">
-          <button class="button" type="submit">Confirmar</button>
+          <label for="input-number" class="label">DNI</label>
+          <input type="text" class="input" id="input-dni" placeholder="ej. 49761884" maxlength="8" required>
+        </div>
+        <div class="form-group">
+          <button class="button" type="submit" id="btn-confirm">Confirmar</button>
         </div>
       </form>
-      
+
       <div class="thank-you disabled" id="thank-you">
         <img src="../assets/pagos/icon-complete.svg" alt="Ícono-de-completado">
         <p class="thank-you-title">¡Gracias por tu compra!</p>
@@ -74,7 +96,7 @@
     </div>
 
   </main>
-
+  <!--Libreria Cleave.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js" integrity="sha512-SvgzybymTn9KvnNGu0HxXiGoNeOi0TTK7viiG0EGn2Qbeu/NFi3JdWrJs2JHiGA1Lph+dxiDv5F9gDlcgBzjfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="../script/metodoDePago.js"></script>
 </body>

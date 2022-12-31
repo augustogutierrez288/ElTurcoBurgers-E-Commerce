@@ -1,0 +1,20 @@
+[
+    {"id":1, "nombre":"Burger Turquecita","img":"./assets/burgers/turquecita.webp","precio": 850,"categoria":"carne","cantidad":1},
+    {"id":2, "nombre":"Satanic","img":"./assets/burgers/satanic.webp","precio": 750,"categoria":"carne","cantidad":1},
+    {"id":3, "nombre":"Simple Burger","img":"./assets/burgers/simple.webp","precio": 580,"categoria":"carne","cantidad":1},
+    {"id":4, "nombre":"Torre Burger","img":"./assets/burgers/torre-burger.webp","precio": 980,"categoria":"carne","cantidad":1},
+    {"id":5, "nombre":"Burger Tentacíon","img":"./assets/burgers/tentacion.webp","precio": 1050,"categoria":"carne","cantidad":1},
+    {"id":6, "nombre":"Turco Black","img":"./assets/burgers/black.webp","precio": 1100,"categoria":"carne","cantidad":1},
+    {"id":7, "nombre":"Black & White","img":"./assets/burgers/black_white.webp","precio": 1150,"categoria":"carne","cantidad":1},
+    {"id":8, "nombre":"Burger Kids","img":"./assets/burgers/burguer-kid.webp","precio": 500,"categoria":"carne","cantidad":1},
+    {"id":9, "nombre":"Burger Kids II","img":"./assets/burgers/burguer-kid-doble.webp","precio": 600,"categoria":"carne","cantidad":1},
+    {"id":10, "nombre":"Blue Burger","img":"./assets/burgers/blue-burger.webp","precio": 1000,"categoria":"carne","cantidad":1},
+    {"id":11, "nombre":"Turco Burger","img":"./assets/burgers/turco-burger.webp","precio": 1100,"categoria":"carne","cantidad":1},
+    {"id":12, "nombre":"Burger Amazon","img":"./assets/burgers/amazon.webp","precio": 950,"categoria":"vegetariana","cantidad":1},
+    {"id":13, "nombre":"Selva Burger","img":"./assets/burgers/selva.webp","precio": 950,"categoria":"vegetariana","cantidad":1},
+    {"id":14, "nombre":"VegeBlack","img":"./assets/burgers/vegeblack.webp","precio": 950,"categoria":"vegetariana","cantidad":1},
+    {"id":15, "nombre":"Papas Cheese","img":"./assets/burgers/papas-cheese.webp","precio": 350,"categoria":"papas","cantidad":1},
+    {"id":16, "nombre":"Papas Baches","img":"./assets/burgers/papas-con-bacon-y-queso.webp","precio": 450,"categoria":"papas","cantidad":1},
+    {"id":17, "nombre":"Papas Mix","img":"./assets/burgers/papas-gratinadas-bacon-cheddar-mix-de-queso.webp","precio": 550,"categoria":"papas","cantidad":1},
+    {"id":18, "nombre":"Papas Kids","img":"./assets/burgers/papas-kids.webp","precio": 250,"categoria":"papas","cantidad":1}
+]

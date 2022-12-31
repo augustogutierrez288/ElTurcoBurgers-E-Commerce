@@ -259,7 +259,7 @@ tr{
     height: 25px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 992px) {
 
     .wrapper {
         background-image: url("../assets/pagos/bg-desktop.jpg");
@@ -287,14 +287,6 @@ tr{
         order: 2;
         width: 18rem;
         max-width: unset;
-    }
-
-    .form-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-right: auto;
     }
 
     .form {

@@ -104,6 +104,9 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     form.classList.add("disabled");
     thankYou.classList.remove("disabled");
+    const table = document.getElementById("table");
+    table.style.display = "none";
+    localStorage.clear()
 })
 
 buttonContinue.addEventListener("click", () => {
@@ -126,19 +129,9 @@ if(localStorage.getItem("carrito")) {
 const pProduct = document.querySelector(".p-product");
 const pTotal = document.querySelector(".p-total");
 
-valoresCarrito.forEach((e) =>{
-    pProduct.innerHTML = "$0 ";
-    pTotal.innerHTML = "$0";
-    let sumaProducto = e.cantidad * e.precio
-    let sumaTotal = sumaProducto + 300
-    pProduct.innerHTML = `$${sumaProducto}`;
-    pTotal.innerHTML = `$${sumaTotal}`
-
+let precio = 0;
+valoresCarrito.forEach((producto) =>{
+    precio += producto.precio * producto.cantidad
 })
-
-const btnConfirm = document.getElementById("btn-confirm");
-btnConfirm.addEventListener("click", () => {
-    localStorage.clear()
-    pProduct.innerHTML = "$0";
-    pTotal.innerHTML = "$0";
-})
+pProduct.innerHTML = `$${precio}`;
+pTotal.innerHTML = `$${precio + 300}`

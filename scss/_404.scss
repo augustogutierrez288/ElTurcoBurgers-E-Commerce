@@ -15,18 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .negro{
-        width: 100%;
-        height: 65%;
-        background-color: rgb(33,37,41);
-    }
-    .amarillo{
-        width: 100%;
-        height: 35%;
-        background: #ffbf47;
-        background: -webkit-linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
-        background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
-    }
+    background-color: rgb(33,37,41);
     .contenedor-hijo{
         position: absolute;
         top: 90px;
@@ -75,9 +64,6 @@
                 border-radius: 10px;
                 padding: 15px;
             }
-        }
-        img{
-            width: 390px;
         }
     }
     

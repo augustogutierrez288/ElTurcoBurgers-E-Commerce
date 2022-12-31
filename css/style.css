@@ -675,18 +675,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.contenedor .negro {
-  width: 100%;
-  height: 65%;
   background-color: rgb(33, 37, 41);
-}
-.contenedor .amarillo {
-  width: 100%;
-  height: 35%;
-  background: #ffbf47;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ffbf47), to(#fff647));
-  background: linear-gradient(0deg, #ffbf47 0%, #fff647 100%);
 }
 .contenedor .contenedor-hijo {
   position: absolute;
@@ -744,9 +733,6 @@ body {
   text-align: center;
   border-radius: 10px;
   padding: 15px;
-}
-.contenedor .contenedor-hijo img {
-  width: 390px;
 }
 
 .body-loguin {

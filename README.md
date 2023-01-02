@@ -30,8 +30,7 @@ Utilizo Fetch y un archivo local JSON
 
 ## Imagenes 
 
-![Mobile](./assets/El%20Turco%20Burgers%20Mobile.png)
-![Desktop](./assets/El%20Turco%20Burgers.png)
+![Portada](./assets/El%20Turco%20Burgers.png)
 
 ## Enlace
 

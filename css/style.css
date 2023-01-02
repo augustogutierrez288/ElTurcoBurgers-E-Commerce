@@ -1103,6 +1103,9 @@ input[type=submit]:active {
   .contenedor-hijo div {
     text-align: left;
   }
+  .contenedor-carrito {
+    width: 40vw;
+  }
 }
 @media screen and (min-width: 768px) {
   .div-padre {

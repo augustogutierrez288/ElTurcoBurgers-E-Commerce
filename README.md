@@ -16,9 +16,11 @@ Este proyecto seguirá en desarrollo mientras vaya aprendiendo nuevas tecnologí
 ### Lenguales
 1. HTML5
 2. CSS3
-3. SASS 
-4. BOOTSTRAP 5.1.3
-5. JAVASCRIPT 
+3. SASS
+4. JAVASCRIPT 
+
+### Framework
+1. BOOTSTRAP 5.1.3
 
 ### Librerias
 1. Data Aos >Para las Animaciones 

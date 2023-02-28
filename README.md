@@ -1,5 +1,7 @@
 # El Turco Burgers E-commerce(Frontend)
 
+![Portada](./assets/El-Turco-Burgers-Portada.png)
+
 ## Introduccion
 
 ¿De qué trata?
@@ -28,12 +30,4 @@ Este proyecto seguirá en desarrollo mientras vaya aprendiendo nuevas tecnologí
 3. Cleave.js >Para el formulario metodo de pago.
 
 ### Consumo de APIS 
-Utilizo Fetch y un archivo local JSON 
-
-## Imagenes 
-
-![Portada](./assets/El%20Turco%20Burgers%20Portada.png)
-
-## Enlace
-
-[Visita mi proyecto](https://augustogutierrez288.github.io/ElTurcoBurgers-WebSite/)
+Utilizo Fetch y un archivo local JSON
